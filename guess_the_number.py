@@ -1,6 +1,6 @@
-
 import random
-def level():
+
+def level(): #user chooses difficulty.
   print(f"you want it the easy way? (press e)\nor the hard way? (press h)")
   o = input()
   if o == "h":
@@ -8,7 +8,7 @@ def level():
   else:
     return 10
 
-def game(): 
+def game(): #the main game function
   tries = level()
   number = random.randint(1,100)
   i = 0
@@ -25,9 +25,12 @@ def game():
       print("too high")
   if guess != number:
     print("you lost")
+
+
 print("The game is called 'guess the number'. It's very easy. I have a number in my mind. you have to find it. Wanna try? (y/n)")
 ans = input()
 while ans == "y":
   game()
   ans = input("wanna try again?")
+  
 print("\n\nok, bye")
